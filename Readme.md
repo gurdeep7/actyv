@@ -27,4 +27,4 @@ Join all the arguments together and normalize the resulting path.
 
 http://localhost:3000/books/search
 
-![search image](http://url/to/img.png)
+![search image](./public/images/img%20(3).png)
