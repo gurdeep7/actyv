@@ -25,6 +25,6 @@ Join all the arguments together and normalize the resulting path.
 
 # DAY2
 
-http://localhost:3000/books/search
+`http://localhost:3000/books/search`
 
 ![search image](./public/images/img%20(3).png)
