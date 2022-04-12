@@ -57,6 +57,22 @@ Join all the arguments together and normalize the resulting path.
 
 ![Instance](./public/images/Screenshot%20(252).png)
 
+# DAY-5
+
+### Using jsonwebtoken, passport-jwt, passport
+
+### Getting token while registration
+
+![token while registration](./public/images/img%20(1).png)
+
+### Getting Details of user with the help of token using jwt passport strategy
+
+![token while registration](./public/images/img%20(4).png)
+
+
+
+
+
 
 
 
