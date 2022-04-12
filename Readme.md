@@ -1,4 +1,4 @@
-# DAY1
+# DAY-1
 ## path
 
 This module is used for handling and transforming of paths.
@@ -23,7 +23,7 @@ path.join([path1][, path2][, ...])
 
 Join all the arguments together and normalize the resulting path.
 
-# DAY2
+# DAY-2
 
 `http://localhost:3000/books/search`
 
@@ -31,4 +31,19 @@ Join all the arguments together and normalize the resulting path.
 
 `http://localhost:3000/auth/login`
 
-![search image](./public/images/login.png)
+![Login image](./public/images/login.png)
+
+# DAY-3
+
+`http://localhost:3000/book/add`
+
+![add book](./public/images/Screenshot%20(253).png)
+
+added book successfully
+![add book](./public/images/Screenshot%20(254).png)
+
+# DAY-4
+
+
+
+

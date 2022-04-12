@@ -45,6 +45,19 @@ router.post("/register",async (req, res) => {
       return res.status(500).json({ status: "failed", message: e.message});
     }})
 
+    router.get("/virtual",async (req, res) => {
+  
+      try {
+        
+        user = await User.find().select(["first_name","last_name"]).lean().exec();
+     
+        
+        res.status(201).json({user });
+      } catch (e) {
+        return res.status(500).json({ status: "failed", message: e.message});
+      }})
+  
+
     router.get("/bytoken",passport.authenticate("jwt",{session:true}), async(req,res) => {
       try {
         res.send(req.user);
