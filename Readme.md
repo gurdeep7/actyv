@@ -22,3 +22,9 @@ It is used in app.use to register it as middleware, before executing any end rou
 path.join([path1][, path2][, ...])
 
 Join all the arguments together and normalize the resulting path.
+
+# DAY2
+
+http://localhost:3000/books/search
+
+![search image](http://url/to/img.png)
