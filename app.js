@@ -3,12 +3,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+const passport = require("passport")
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var booksRouter = require("./routes/books");
 var authRouter = require("./routes/auth")
 var app = express();
+app.use(passport.initialize());
+
+
 
 const connect = require("./connections/mongoose")
 // view engine setup
@@ -30,6 +33,7 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
@@ -41,9 +45,9 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 //Connecting to server
-
-app.listen(2345,async()=>{  // do not add localhost here if you are deploying it
-  await connect();
-  console.log("server listening to "+ 2345);
-});
-module.exports = app;
+connect()
+// app.listen(2345,async()=>{  // do not add localhost here if you are deploying it
+//   await connect();
+//   console.log("server listening to "+ 2345);
+// });
+ module.exports = app;
