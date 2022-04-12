@@ -45,6 +45,11 @@ Join all the arguments together and normalize the resulting path.
 
 # DAY-4
 
+`http://localhost:3000/users/register`
+
+![Registration](./public/images/Screenshot%20(255).png)
+
+
 
 
 
