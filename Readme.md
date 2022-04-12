@@ -49,6 +49,16 @@ Join all the arguments together and normalize the resulting path.
 
 ![Registration](./public/images/Screenshot%20(255).png)
 
+`http://localhost:3000/birthday/instance`
+
+![Instance](./public/images/Screenshot%20(251).png)
+
+`http://localhost:3000/users/virtual`
+
+![Instance](./public/images/Screenshot%20(252).png)
+
+
+
 
 
 
