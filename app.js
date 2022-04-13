@@ -8,7 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var booksRouter = require("./routes/books");
 var authRouter = require("./routes/auth")
-var birthdayRouter = require("./routes/birthday")
+var birthdayController = require("./controllers/borthday.controller")
 var app = express();
 app.use(passport.initialize());
 
@@ -29,7 +29,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/book', booksRouter);
 app.use('/auth', authRouter)
-app.use('/birthday',birthdayRouter)
+app.use('/birthday',birthdayController)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

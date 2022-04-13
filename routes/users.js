@@ -16,56 +16,20 @@ router.get('/info', function(req, res, next) {
   res.status(200).json({data: "Welcome to Actyv!!"})
 });
 var passport = require("passport");
+const { register, bytoken, virtual, byDob } = require('../controllers/user.controller');
 
 router.get('/register', function(req, res, next) {
   res.render('register', { title: 'Register' });
 });
-router.post("/register",async (req, res) => {
-  console.log(req.body)
-  try {
-    
-    user = await User.create(req.body);
- 
-    const token = newToken(user._id)
-    res.status(201).json({user,token });
-  } catch (e) {
-    return res.status(500).json({ status: "failed", message: e.message});
-  }})
+router.post("/register",register)
 
 
-  router.get("/dob/:dob",async (req, res) => {
-  
-    try {
-      
-      user = await User.find({dob:req.params.dob}).lean().exec();
-   
-      
-      res.status(201).json({user });
-    } catch (e) {
-      return res.status(500).json({ status: "failed", message: e.message});
-    }})
+  router.get("/dob/:dob",byDob)
 
-    router.get("/virtual",async (req, res) => {
-  
-      try {
-        
-        user = await User.find().select(["first_name","last_name"]).lean().exec();
-     
-        
-        res.status(201).json({user });
-      } catch (e) {
-        return res.status(500).json({ status: "failed", message: e.message});
-      }})
+    router.get("/virtual",virtual)
   
 
-    router.get("/bytoken",passport.authenticate("jwt",{session:true}), async(req,res) => {
-      try {
-        res.send(req.user);
-       
-      } catch (e) {
-        return res.status(500).json({ status: "failed", message: e.message});
-      }
-    })
+    router.get("/bytoken",passport.authenticate("jwt",{session:true}),bytoken)
     
   
 module.exports = router;
