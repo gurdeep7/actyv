@@ -8,7 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var booksRouter = require("./routes/books");
 var authRouter = require("./routes/auth")
-var birthdayController = require("./controllers/borthday.controller")
+var birthdayController = require("./controllers/birthday.controller")
 var app = express();
 app.use(passport.initialize());
 
