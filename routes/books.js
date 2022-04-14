@@ -4,7 +4,8 @@ router.get("/search", function (req, res, next) {
   res.status(200).send({ id: 1, name: "Harry Potter", author: "J.K. Rowling" });
 });
 router.get("/", function (req, res, next) {
-  res.send("respond with a resource");
+  
+  res.status(200).json("respond with a resource");
 });
 router.post("/add", function (req, res, next) {
   console.info(req.body);
