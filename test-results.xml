@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.6630" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2022-04-13T12:10:35" tests="0" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="/GET virtual" timestamp="2022-04-13T12:10:35" tests="1" file="E:\github\unit-6\actyv-mocha\test\user.test.js" time="0.6610" failures="0">
+    <testcase name="/GET virtual it should GET all users first name and last name" time="0.6580" classname="it should GET all users first name and last name">
+    </testcase>
+  </testsuite>
+</testsuites>
